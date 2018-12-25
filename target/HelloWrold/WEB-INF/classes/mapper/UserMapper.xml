@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 扫描 接口-->
+<mapper namespace="com.nf147.dao.UserMapper">
+
+    <select id="check" parameterType="com.nf147.entity.User" resultType="java.lang.Integer">
+             select count(*) from user where userName = #{userName} and password = #{password}
+         </select>
+
+</mapper>
